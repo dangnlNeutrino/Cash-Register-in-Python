@@ -37,8 +37,10 @@ def cash_register(total_cost: float,payment: float) -> dict:
         #need to round the current change to nearest 2-digit floating point
         current_change = round(current_change,2)
 
+    denomination_dict = {x:y for x,y in denomination_dict.items() if y!=0} 
     return denomination_dict
 
+#def print_den
 #test case
 #[1.01,2],
 test_cases = [[1.01,2],[101,200],[1,0]]
